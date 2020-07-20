@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <form action="/quotes" method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="quote" name="quote">
+        <button type="submit">Submit</button>
+    </form>
+    <ul>
+        <%for (let i = 0; i < data.length; i++) {%>
+            <li>
+                <span><%=data[i].name%></span>
+                <span><%=data[i].quote%></span>
+            </li>
+        <%}%>
+        
+    </ul>
+    <div>
+  <h2>Darth Vadar invades!</h2>
+  <p>
+    Replace first Yoda's quote with a quote written by Darth Vadar
+  </p>
+  <button id="update-button">Replace Yoda's quote</button>
+    <script src="/main.js"></script>
+
+</div>
+</body>
+</html>
